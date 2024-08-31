@@ -7,50 +7,6 @@
         mc:Ignorable="d"
         Title="Системы счисления" Height="397" Width="1215" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ShowActivated="False" Padding="0" Icon="иконка.png">
 
-    <Window.Resources>
-
-        <Style x:Key="LabelStyle1" TargetType="Label">
-            <Setter Property="Background" Value="{x:Null}" />
-            <Setter Property="Foreground" Value="White"></Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Label.Background" Value="#7F636363"></Setter>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-        <Style x:Key="TextBoxStyle1" TargetType="TextBox">
-            
-            <!-- Базовая настройка (начальная при запуске) -->
-            
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Background" Value="#7FFFFFFF"/>
-            <Setter Property="BorderBrush" Value="White"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TextBox}">
-                        <Border CornerRadius="2" BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="{TemplateBinding BorderThickness}" 
-                                Background="{TemplateBinding Background}">
-                            <ScrollViewer x:Name="PART_ContentHost" 
-                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            
-            <!-- Стиль для ивентов (тригеров) -->
-            
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#99FFFFFF"/>
-                    <Setter Property="BorderBrush" Value="White"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-    </Window.Resources>
-    
     <Grid Margin="0,0,-0.4,-1" Height="369" VerticalAlignment="Top">
         <Image Margin="-164,-309,0.2,0" Source="задник.png" Stretch="Fill"/>
         <Image Margin="928,58,-85.8,0" Source="дэвушка.png" Stretch="Fill"/>
